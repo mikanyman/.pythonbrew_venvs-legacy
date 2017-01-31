@@ -1,0 +1,98 @@
+{% load cms_tags sekizai_tags static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="EN" dir="ltr" xml:lang="EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>CIDOC Co-reference Working Group</title>
+    <meta content="no" http-equiv="imagetoolbar" />
+    <link type="text/css" href="{% static 'css/layout.css' %}" rel="stylesheet" />
+    <link type="text/css" href="{% static 'css/tables.css' %}" rel="stylesheet" />
+    <!-- Homepage Specific Elements -->
+    <script src="{% static 'js/jquery/jquery-1.4.1.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery/jquery-ui-1.7.2.custom.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery/jquery.tabs.setup.js' %}" type="text/javascript"></script>
+    <!-- End Homepage Specific Elements -->
+    {% render_block "css" %}
+  </head>
+  <body id="top">
+    {% cms_toolbar %}
+    <div class="wrapper row1">
+      <div class="clear" id="header">
+        <div class="fl_left">
+          <div class="logo">Co-Reference</div>
+          <div class="sub_logo">CIDOC Co-reference Working Group</div>
+        </div>
+        <div class="fl_right">
+          <div class="fl_right_txt">
+            <a href="/frontpage/">Front Page</a> |
+            <a href="/">Contact</a> |
+            <a href="/admin/">Login</a> |
+            <a href="/">Join</a>
+          </div>
+          <form id="sitesearch" method="post" action="#">
+            <fieldset> <strong>SEARCH:</strong>
+                <input type="text" onfocus="this.value=(this.value=='Search Our Website?')? '' : this.value ;"
+                value="Search Our Website?" /> <input type="image" alt="Search"
+                id="search" src="{% static 'images/academic/search.gif' %}" /> </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper row2">
+      <div class="rnd">
+        <div id="topnav">
+          <ul>
+            <li{% if "frontpage" in request.path %} class="active"{% endif %}><a href="/frontpage/">&nbsp;FRONT PAGE&nbsp;</a></li>
+            <li{% if "seura" in request.path %} class="active"{% endif %}><a href="/activities/">&nbsp;ACTIVITIES&nbsp;</a></li>
+            <li{% ifequal request.path "/en/resources/" %} class="active"{% endifequal %}><a href="/resources/">&nbsp;RESOURCES&nbsp;</a></li>
+            <li{% ifequal request.path "/en/experimental/" %} class="active"{% endifequal %}><a href="/experimental/">&nbsp;EXPERIMENTAL&nbsp;</a></li>
+            <li{% ifequal request.path "/en/bibliography/" %} class="active"{% endifequal %}><a href="/bibliography/">&nbsp;BIBLIOGRAPHY&nbsp;</a></li>
+          </ul>
+        </div>
+        </div>
+    </div>
+
+    {% block base_content %}{% endblock %}
+
+    <div class="wrapper row4">
+      <div class="rnd">
+        <div class="clear" id="footer">
+          <div class="fl_left clear">
+            <div class="fl_left center"><img alt="" src="{% static 'images/academic/demo/worldmap.gif' %}" /><br />
+              <a href="/kartta/">Members and Projects on the Map &raquo;</a></div>
+
+            <!--
+            <address>
+            </address>
+            -->
+
+          </div>
+          <div class="fl_right">
+            <div class="clear" id="social">
+              <p>Co-reference in Other Services:</p>
+              <ul>
+                <li><a href="#" style="background-position:0 0;">Twitter</a></li>
+                <li><a href="#" style="background-position:-72px 0;">LinkedIn</a></li>
+                <!-- <li><a href="#" style="background-position:-142px 0;">Facebook</a></li> -->
+                <!-- <li><a href="#" style="background-position:-212px 0;">Flickr</a></li> -->
+                <li><a href="#" style="background-position:-282px 0;">RSS</a></li>
+              </ul>
+              <br /><br /><br /><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="clear" id="copyright">
+        <p class="fl_left">Site: Synapse Computing</p>
+        <p class="fl_right"><!-- Template by <a title="Free Website Templates" href="http://www.os-templates.com/">OS
+            Templates</a>--></p>
+      </div>
+    </div>
+    {% render_block "js" %}
+  </body>
+</html>
+
+

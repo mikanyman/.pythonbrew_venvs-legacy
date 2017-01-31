@@ -1,0 +1,98 @@
+10
+
+dir
+7
+file:///var/svn/sumu-arkestra-01/trunk/sitestatic
+file:///var/svn/sumu-arkestra-01
+
+
+
+2013-02-07T17:27:32.732838Z
+2
+mnyman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d5e0e604-4f98-4275-8595-63b67ea8848e
+
+fancybox
+dir
+
+plugin_icons
+dir
+
+semanticeditor
+dir
+
+static.png
+file
+
+
+
+
+2013-02-07T17:29:02.751222Z
+90e8341f263216d9b535d53e97f94828
+2013-02-07T17:27:32.732838Z
+2
+mnyman
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9635
+
+arkestra
+dir
+
+widgetry
+dir
+
+jquery
+dir
+
+swf
+dir
+
+filer
+dir
+
+cms
+dir
+
+slider
+dir
+
+admin
+dir
+
+combobox
+dir
+

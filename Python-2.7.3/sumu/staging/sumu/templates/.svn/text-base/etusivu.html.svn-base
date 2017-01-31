@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load cms_tags static %}
+
+{% block base_content %}
+    <div class="wrapper">
+      <div class="clear" id="featured_slide">
+        <div class="overlay_left"></div>
+        <div id="featured_content">
+          <div id="fc1" class="featured_box"><img alt="" src="{% static 'images/featuring/01_astuvan_B_low.jpg' %}" />
+            <div class="floater">
+              <p>Hirvi, ihminen ja vene ovat Suomen kalliomaalausten yleisimm&auml;t kuvat. Ne muodostavat 
+                  noin 3/4 kaikista tunnistettavista kuvista. Suurin osa niist&auml; on hyvin 
+                  pelkistettyj&auml;, l&auml;hes tikkumaisia. Kuva: Astuvansalmen ryhm&auml; B.</p>
+              <!-- <p class="readmore"><a href="#">Lis&auml;&auml; &raquo;</a></p> -->
+            </div>
+          </div>
+          <div id="fc2" class="featured_box"><img alt="" src="{% static 'images/featuring/02_haukkavuoren_kammen_low.jpg' %}" />
+            <div class="floater">
+              <p>Punamullalla v&auml;ritetyn k&auml;mmenen painamisella kallioon on mahdollisesti ollut 
+                  rituaalista merkityst&auml;: siten on saatu yhteys kalliossa olevaan henkeen. 
+                  Hahmottomat punamultal&auml;ik&auml;t on saatettu tehd&auml; samassa tarkoituksessa. 
+                  Kuva: K&auml;mmen M&auml;ntyharjun Haukkavuori III:ssa.</p>
+              <!-- <p class="readmore"><a href="#">Lis&auml;&auml; &raquo;</a></p> -->
+            </div>
+          </div>
+          <div id="fc3" class="featured_box"><img alt="" src="{% static 'images/featuring/03_saraakallio_kaarme_low.jpg' %}" />
+            <div class="floater">
+              <p>K&auml;&auml;rme on hirven j&auml;lkeen kalliomaalaustemme toiseksi yleisin el&auml;in. 
+                  Se kuvataan yleens&auml; yksinkertaisena siksak-viivana. Kalankuvia on alle kymmenen, 
+                  lintuja kaksi, lis&auml;ksi on joukko tulkinnanvaraisia el&auml;inhahmoja. 
+                  Kuva: K&auml;&auml;rmeeksi tulkittu siksak-viiva Saraakalliolla.</p>
+              <!-- <p class="readmore"><a href="#">Lis&auml;&auml; &raquo;</a></p> -->
+            </div>
+          </div>
+          <div id="fc4" class="featured_box"><img alt="" src="{% static 'images/featuring/04_uittovuori_low.jpg' %}" />
+            <div class="floater">
+              <p>Kalliomaalauksissamme on joukko vinoristej&auml;, 
+                viiva- ja ornamenttikuvioita sek&auml; 
+                tunnistamattomia aiheita. <!-- Niiden merkitys on 
+                tuntematon, mutta a-->Ainakin osa saattaa 
+                liitty&auml; shamaanin n&auml;kyihin h&auml;nen 
+                vaipuessaan transsiin. Kuva: Tunnistamattomia 
+                kuvioita Laukaan Uittovuorella.</p>
+              <!-- <p class="readmore"><a href="#">Lis&auml;&auml; &raquo;</a></p> -->
+            </div>
+          </div>
+          <div id="fc5" class="featured_box"><img alt="" src="{% static 'images/featuring/05_astuvan_naama_low.jpg' %}" />
+            <div class="floater">
+              <p>Kalliomaalaukset sijaitsevat usein vesist&ouml;jen 
+                kapeikkokohdissa. Monissa maalauskallioissa 
+                on havaittavissa ihmisen tai el&auml;imen 
+                hahmoa. Kallioiden <!-- pinnan -->lohkeamat, juonteet 
+                tai ulokkeet ovat <!-- osittain -->saattaneet 
+                vaikuttaa my&ouml;s maalausten sijoitteluun. 
+                Kuva: Astuvansalmen ukon sivuprofiili.</p>
+              <!-- <p class="readmore"><a href="#">Lis&auml;&auml; &raquo;</a></p> -->
+            </div>
+          </div>
+        </div>
+        <ul id="featured_tabs">
+          <li><a href="#fc1">Hirvi, ihminen<br />ja vene</a></li>
+          <li><a href="#fc2">K&auml;mmenkuvia ja<br />punamultal&auml;ikki&auml;</a></li>
+          <li><a href="#fc3">K&auml;&auml;rmeet ja<br />muut el&auml;imet</a></li>
+          <li><a href="#fc4">Geometriset<br />kuviot</a></li>
+          <li class="last"><a href="#fc5">Kalliot ja<br />ymp&auml;rist&ouml;</a></li>
+        </ul>
+        <div class="overlay_right"></div>
+        </div>
+    </div>
+
+    <div class="wrapper row3">
+      <div class="rnd">
+        <div class="clear" id="container">
+
+        <!-- content -->
+          <div id="content">
+            {% placeholder etusivu_paajuttu %}
+            {% placeholder etusivu_uutinen_2 %}
+          </div>
+
+          <div id="column">
+            <div class="holder">
+              {% placeholder etusivu_uutinen_1 %}
+            </div>
+          </div>
+        <!-- /content -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper row4">
+      <div class="rnd_grey">
+        {% placeholder etusivu_footer %}
+      </div>
+    </div>
+{% endblock %}

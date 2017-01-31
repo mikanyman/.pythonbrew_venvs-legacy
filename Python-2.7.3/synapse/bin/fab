@@ -1,0 +1,9 @@
+#!/home/mnyman/.pythonbrew/venvs/Python-2.7.3/synapse/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'Fabric==1.6.1','console_scripts','fab'
+__requires__ = 'Fabric==1.6.1'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('Fabric==1.6.1', 'console_scripts', 'fab')()
+)

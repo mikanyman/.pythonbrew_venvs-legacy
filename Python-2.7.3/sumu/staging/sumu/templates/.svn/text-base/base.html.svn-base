@@ -1,0 +1,70 @@
+{% load cms_tags sekizai_tags static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="EN" dir="ltr" xml:lang="EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Suomen muinaistaideseura ry</title>
+    <meta content="no" http-equiv="imagetoolbar" />
+    <link type="text/css" href="{% static 'css/layout.css?version=2' %}" rel="stylesheet" />
+    <link type="text/css" href="{% static 'css/tables.css?version=2' %}" rel="stylesheet" />
+    <!-- Homepage Specific Elements -->
+    <script src="{% static 'js/jquery/jquery-1.4.1.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery/jquery-ui-1.7.2.custom.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery/jquery.tabs.setup.js' %}" type="text/javascript"></script>
+    <!-- End Homepage Specific Elements -->
+    {% render_block "css" %}
+  </head>
+  <body id="top">
+    {% cms_toolbar %}
+    <div class="wrapper row1">
+      <div class="clear" id="header">
+        <div class="fl_left">
+          <div class="logo">Muinaistaide</div>
+          <div class="sub_logo">Suomen muinaistaideseura ry</div>
+        </div>
+        <div class="fl_right">
+          <div class="fl_right_txt">
+            <a href="/etusivu/">Etusivu</a> |
+            <a href="/seura/">Yhteystiedot</a> |
+            <a href="/admin/">Kirjaudu</a> |
+            <a href="/seura/jasenhakulomake/">Liity j&auml;seneksi</a>
+          </div>
+          <form id="sitesearch" method="post" action="#">
+            <fieldset> <strong>HAE:</strong>
+                <input type="text" onfocus="this.value=(this.value=='Search Our Website?')? '' : this.value ;"
+                value="Search Our Website?" /> <input type="image" alt="Search"
+                id="search" src="{% static 'images/academic/search.gif' %}" /> </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper row2">
+      <div class="rnd">
+        <div id="topnav">
+          <ul>
+            <li{% if "etusivu" in request.path %} class="active"{% endif %}><a href="/etusivu/">&nbsp;ETUSIVU&nbsp;</a></li>
+            <li{% if "seura" in request.path %} class="active"{% endif %}><a href="/seura/">&nbsp;SEURA&nbsp;</a></li>
+            <li{% ifequal request.path "/fi/ajankohtaista/" %} class="active"{% endifequal %}><a href="/ajankohtaista/">&nbsp;AJANKOHTAISTA&nbsp;</a></li>
+            <li{% ifequal request.path "/fi/kalliomaalaukset/" %} class="active"{% endifequal %}><a href="/kalliomaalaukset/">&nbsp;KALLIOMAALAUKSET&nbsp;</a></li>
+            <li{% ifequal request.path "/fi/tutkimus/" %} class="active"{% endifequal %}><a href="/tutkimus/">&nbsp;TUTKIMUS&nbsp;</a></li>
+            <li{% ifequal request.path "/fi/julkaisut/" %} class="active"{% endifequal %}><a href="/julkaisut/">&nbsp;JULKAISUT&nbsp;</a></li>
+            <li{% ifequal request.path "/fi/matkakertomukset/" %} class="active"{% endifequal %}><a href="/matkakertomukset/">&nbsp;MATKAKERTOMUKSET&nbsp;</a></li><!-- class=last -->
+          </ul>
+        </div>
+        </div>
+    </div>
+
+    {% block base_content %}{% endblock %}
+
+    <div class="wrapper">
+      <div class="clear" id="copyright">
+        <p class="fl_left">Toteutus: Synapse Computing Oy</p>
+        <p class="fl_right">
+          <!-- Template by <a title="Free Website Templates" href="http://www.os-templates.com/">OS Templates</a>--></p>
+      </div>
+    </div>
+    {% render_block "js" %}
+  </body>
+</html>
+

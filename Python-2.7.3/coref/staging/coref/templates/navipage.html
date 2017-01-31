@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags static %}
+
+{% block base_content %}
+    <div class="wrapper row3">
+      <div class="rnd">
+        <div class="clear" id="container">
+
+        <!-- content -->
+          <div id="content">
+            {% placeholder main_content %}
+          </div>
+
+          <div id="column">
+
+            <div class="subnav">
+              <h2>Navigate</h2>
+              <ul>
+                {% show_menu 1 100 100 100 %}
+              </ul>
+            </div>
+
+            <div class="holder">
+
+            </div>
+          </div>
+        <!-- /content -->
+
+        </div>
+      </div>
+    </div>
+{% endblock %}

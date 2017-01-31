@@ -1,0 +1,10 @@
+modify
+--This line, and those below, will be ignored--
+
+M    settings.py
+M    urls.py
+M    exdm/views.py
+M    middleware/URLMiddlewares.py
+M    templates/snippets/xdm.html
+M    templates/exdm/wrapper.html
+M    templates/base.html

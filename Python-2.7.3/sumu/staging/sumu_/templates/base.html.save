@@ -1,0 +1,15 @@
+{% load cms_tags sekizai_tags menu_tags staticfiles %}
+<html>
+  <head>
+      {% render_block "css" %}
+      <script type="text/javascript" src="{% static 'js/jquery-1.9.1.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/easyXDM.debug.js' %}"></script>
+  </head>
+  <body>
+      {% cms_toolbar %}
+      {% show_menu %}<br/><br/>
+      {% placeholder base_content %}
+      {% block base_content %}{% endblock %}
+      {% render_block "js" %}
+  </body>
+</html>

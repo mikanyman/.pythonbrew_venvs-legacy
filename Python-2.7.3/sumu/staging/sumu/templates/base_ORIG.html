@@ -1,0 +1,30 @@
+{% load cms_tags sekizai_tags menu_tags staticfiles %}
+<html>
+  <head>
+      <meta http-equiv='expires' content='thu, 31 dec 2020 23:50:59 GMT'>
+      {% render_block "css" %}
+      <script type="text/javascript" src="{% static 'js/jquery/jquery-1.9.1.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/easyXDM/easyXDM.debug.js' %}"></script>
+  </head>
+  <body>
+      {% cms_toolbar %}
+      {% show_menu %}<br/><br/>
+      <div id="container"></div>
+
+      <!-- easyXDM consumer -->
+      <script type="text/javascript">
+            var transport = new easyXDM.Socket(/** The configuration */{
+                remote: REMOTE + "/resize_intermediate.html?url=resized_iframe_1.html",
+                //swf: REMOTE + "/../easyxdm.swf",
+                container: "embedded",
+                onMessage: function(message, origin){
+                    this.container.getElementsByTagName("iframe")[0].style.height = message + "px";
+                }
+            });
+      </script>
+
+      {% placeholder base_content %}
+      {% block base_content %}{% endblock %}
+      {% render_block "js" %}
+  </body>
+</html>

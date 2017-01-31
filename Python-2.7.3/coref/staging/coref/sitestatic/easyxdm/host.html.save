@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>easyXDM.Transport test</title>
+        <script type="text/javascript" src="http://sumu.synapse-computing.com:8001/static/js/easyXDM/easyXDM.debug.js"></script>
+    </head>
+    <body>
+        <br /><!-- use css to style this and its contained iframe --><br /><div id="container">/div><br />
+        <script type="text/javascript">
+        new easyXDM.Socket({
+            remote: "resized_iframe.html",
+            container: document.getElementById("container"),
+            onMessage: function(message, origin){
+                this.container.getElementsByTagName("iframe")[0].style.height = message + "px";
+            }
+        });
+
+        var socket = new easyXDM.Socket({
+            remote: "http://sumu.synapse-computing.com:8001/static/easyxdm/provider.html",
+            onMessage: function(message, origin){
+                alert("Received '" + message + "' from '" + origin + "'");
+            },
+            onReady: function() {
+                socket.postMessage("Yay, it works!");
+            }
+        });
+        </script>
+    </body>
+</html>

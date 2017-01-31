@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block base_content %}
+  <div class="wrapper row3">
+    <div class="rnd">
+      <div class="clear" id="container">
+
+      <!-- content <div id="content"><div class="djubby_wrapper"> -->
+        {{ graph|safe }}
+      <!-- /content </div></div> -->
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

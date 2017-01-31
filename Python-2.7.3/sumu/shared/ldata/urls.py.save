@@ -1,0 +1,19 @@
+from django.conf.urls.defaults import *
+
+urlpatterns = patterns('',
+
+    #(r'^(.*)', 'djubby.dispatcher'),
+    #(r'^ldata/(.*)', 'djubby.dispatcher'),
+
+    # http://stackoverflow.com/questions/15382906/how-to-prevent-the-extra-slashes-comin-in-the-url-of-the-browser
+    #url(r'^kebreading/(?:(?P<param>\w*)/(?P<date>\w*)/(?P<year>\w*)/(?P<month>\w*)/)?$', kEBReading1',name="kebreading")
+
+    (r'^(?:(?<param>.*))?$', 'djubby.dispatcher'),
+
+urlpatterns += patterns('django.views.generic.simple',
+    ('^foo/$', 'redirect_to', {'url': ''}),
+)
+
+
+)
+

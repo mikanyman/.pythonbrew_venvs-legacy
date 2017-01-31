@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <title>easyXDM.Transport test</title>
+        <script type="text/javascript" src="http://sumu.synapse-computing.com:8001/static/js/easyXDM/easyXDM.debug.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var socket = new easyXDM.Socket({
+            remote: "http://sumu.synapse-computing.com:8001/static/easyxdm/provider.html",
+            onMessage: function(message, origin){
+                alert("Received '" + message + "' from '" + origin + "'");
+            },
+            onReady: function() {
+                socket.postMessage("Yay, it works!");
+            }
+        });
+        </script>
+    </body>
+</html>

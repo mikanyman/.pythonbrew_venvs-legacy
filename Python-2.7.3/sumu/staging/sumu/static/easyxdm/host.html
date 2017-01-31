@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>easyXDM.Transport test</title>
+        <script type="text/javascript" src="http://sumu.synapse-computing.com:8001/static/js/easyXDM/easyXDM.debug.js"></script>
+    </head>
+    <body>
+
+        <div id="container"></div>
+        <script type="text/javascript">
+            new easyXDM.Socket({
+                remote: "http://sumu.synapse-computing.com:8001/static/easyxdm/resized_iframe.html",
+                container: document.getElementById("container"),
+                onMessage: function(message, origin){
+                    //this.container.getElementsByTagName("div")[0].style.height = message + "px";
+                    alert("aaaaaaaaa");
+                }
+            });
+        </script>
+
+    </body>
+</html>

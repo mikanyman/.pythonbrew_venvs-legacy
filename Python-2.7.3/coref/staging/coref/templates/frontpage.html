@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load cms_tags static %}
+
+{% block base_content %}
+    <div class="wrapper row3">
+      <div class="rnd">
+        <div class="clear" id="container">
+
+        <!-- content -->
+          <div id="content">
+            {% placeholder main_content %}
+          </div>
+
+          <div id="column">
+            <div class="holder">
+              {% placeholder news_1 %}
+            </div>
+          </div>
+        <!-- /content -->
+
+        </div>
+      </div>
+    </div>
+{% endblock %}

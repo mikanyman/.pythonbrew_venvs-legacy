@@ -1,0 +1,11 @@
+{% ssi html_path %}
+<script type="text/javascript" src="http://sumu.synapse-computing.com:8001/static/js/easyXDM/easyXDM.debug.js"></script>
+<script type="text/javascript">
+  var socket = new easyXDM.Socket({
+    onReady: function(message, origin){
+      iframe_height = document.body.scrollHeight - 300;
+      socket.postMessage(iframe_height);
+    }
+  });
+</script>
+

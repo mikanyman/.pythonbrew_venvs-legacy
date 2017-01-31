@@ -1,0 +1,9 @@
+#!/home/mnyman/.pythonbrew/venvs/Python-2.7.3/sumu/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'rdflib==4.0.1','console_scripts','csv2rdf'
+__requires__ = 'rdflib==4.0.1'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('rdflib==4.0.1', 'console_scripts', 'csv2rdf')()
+)
